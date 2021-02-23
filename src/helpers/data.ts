@@ -9,7 +9,9 @@ export function transformResponse(data: any): any {
   if (typeof data === 'string') {
     try {
       data = JSON.parse(data)
-    } catch (error) {}
+    } catch (error) {
+      //catch
+    }
     return data
   }
 }
