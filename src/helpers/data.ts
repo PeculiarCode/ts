@@ -1,5 +1,5 @@
 import { isPlainObject } from '../helpers/utils'
-export function trnasformRequest(data: any): any {
+export function transformRequest(data: any): any {
   if (isPlainObject(data)) {
     return JSON.stringify(data)
   }
@@ -10,6 +10,7 @@ export function transformResponse(data: any): any {
     try {
       data = JSON.parse(data)
     } catch (error) {
+      console.log(error)
       //catch
     }
     return data
